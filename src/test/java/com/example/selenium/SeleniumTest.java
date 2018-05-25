@@ -56,13 +56,13 @@ public class SeleniumTest {
 
 	}
 
-	@AfterClass
-	public static void cleanUp(){
-		if (driver != null) {
-			driver.close();
-			driver.quit();
-		}
-	}
+//	@AfterClass
+//	public static void cleanUp(){
+//		if (driver != null) {
+//			driver.close();
+//			driver.quit();
+//		}
+//	}
 }
 
 
