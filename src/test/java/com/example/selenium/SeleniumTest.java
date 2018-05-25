@@ -41,7 +41,7 @@ public class SeleniumTest {
 		driver.get("http://localhost:8082");
 		System.out.println("Google Home Page Opened");
 		driver.findElement(By.id("fetch")).click();
-		//System.out.println("///"+driver.findElement(By.id("demo")).getText());
+		System.out.println("///"+driver.findElement(By.id("demo")).getText());
 		assertThat(driver.findElement(By.id("demo")).getText()).contains(expected);
 
 	}
