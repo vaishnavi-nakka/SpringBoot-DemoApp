@@ -51,6 +51,9 @@ public class SeleniumTest {
 		driver.findElement(By.id("fetch")).click();
 		System.out.println("111");
 		driver.manage().timeouts().setScriptTimeout(20, TimeUnit.SECONDS);
+		while(driver.findElement(By.id("demo")).getText().equals("")) {
+			System.out.println("still nothing");
+		}
 		System.out.println("///"+driver.findElement(By.id("demo")).getText());
 		assertThat(driver.findElement(By.id("demo")).getText()).contains(expected);
 
