@@ -5,6 +5,7 @@ import static org.junit.Assert.*;
 
 import java.io.File;
 import java.io.InputStream;
+import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.IOUtils;
@@ -49,6 +50,7 @@ public class SeleniumTest {
 		System.out.println("Google Home Page Opened");
 		driver.findElement(By.id("fetch")).click();
 		System.out.println("111");
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		System.out.println("///"+driver.findElement(By.id("demo")).getText());
 		assertThat(driver.findElement(By.id("demo")).getText()).contains(expected);
 
