@@ -50,7 +50,6 @@ public class SeleniumTest {
 		System.out.println("Google Home Page Opened");
 		driver.findElement(By.id("fetch")).click();
 		System.out.println("111");
-		driver.manage().timeouts().setScriptTimeout(20, TimeUnit.SECONDS);
 		while(driver.findElement(By.id("demo")).getText().equals("")) {
 			System.out.println("still nothing");
 		}
