@@ -11,12 +11,19 @@ import org.apache.commons.io.IOUtils;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import org.junit.runner.RunWith;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.springframework.core.io.ClassPathResource;
+import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.boot.test.context.SpringBootTest;
 
+import com.example.SampleApplication;
+
+@RunWith(SpringRunner.class)
+@SpringBootTest(classes = SampleApplication.class)
 public class SeleniumTest {
 
 

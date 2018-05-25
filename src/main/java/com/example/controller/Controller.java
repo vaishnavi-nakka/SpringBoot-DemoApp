@@ -41,6 +41,7 @@ public class Controller {
 	@GetMapping("/{id}")
 	public 	ResponseEntity<SqlCode> getQueries(@PathVariable int id){
 		SqlCode sqlCode = mainService.generateSQLQuery(id);
+		System.out.println("in Controller");
 	    JSONObject jObj = new JSONObject();
 	    try {
 			jObj.put("data", sqlCode);
