@@ -50,19 +50,19 @@ public class SeleniumTest {
 		System.out.println("Google Home Page Opened");
 		driver.findElement(By.id("fetch")).click();
 		System.out.println("111");
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().setScriptTimeout(30, TimeUnit.SECONDS);
 		System.out.println("///"+driver.findElement(By.id("demo")).getText());
 		assertThat(driver.findElement(By.id("demo")).getText()).contains(expected);
 
 	}
 
-//	@AfterClass
-//	public static void cleanUp(){
-//		if (driver != null) {
-//			driver.close();
-//			driver.quit();
-//		}
-//	}
+	@AfterClass
+	public static void cleanUp(){
+		if (driver != null) {
+			driver.close();
+			driver.quit();
+		}
+	}
 }
 
 
